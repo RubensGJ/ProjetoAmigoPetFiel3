@@ -1,0 +1,466 @@
+/* -------------------Classes universais---------------------- */
+html {
+    scroll-behavior: smooth;
+}
+  
+.gonte1 {
+    font-family: "Titan One", sans-serif;
+    font-style: normal;
+}
+
+:root {
+    --fonte1: "Titan One";
+    --cor1: #FF8346;
+    --cor2: #5b5022;
+    --cor3: #FFD165;
+}
+  
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+  
+a {
+    text-decoration: none; 
+    transition: 0.5s;
+}
+
+a:visited {
+    color: inherit; 
+}
+
+
+a:hover{
+    color:var(--cor2);
+    scale: 1.05;
+}
+
+.botao {
+    background-color: var(--cor1);
+    padding: 20px 45px;
+    font-family: var(--fonte1);
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    margin: 0 0 5% 0 ;
+      
+}
+
+/* ---------------------Cabecario------------------- */
+
+
+
+.cabecario{
+    background-color: var(--cor1);
+    border-radius: 0px 0px 15px 15px;
+    font-family: var(--fonte1);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px;
+    align-items: center;
+    color: white;
+}
+  
+.navbar {
+    display: flex;
+    gap: 25px;
+    font-size: 25px;
+}
+
+/* ----------------------menu Mobile---------------------- */
+
+.menu_mobile{
+    display: none;
+    background-color: var(--cor1);
+    height: 150vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 0%;
+    }
+    
+.navbar_mobile a{
+    font-size: 25px;
+    display: flex;
+    padding: 10% 5%;
+    font-family: var(--fonte1);
+    color: white;
+}
+
+.navbar_mobile a:hover{
+background-color: #FFD165;
+}
+
+.menu_mobile .btn-fechar i{
+    color: #FFD165;
+    font-size: 50px;
+}
+ 
+.menu_mobile .btn-fechar {
+    padding: 5%;
+}
+
+.btn_menu{
+    display: none;
+}
+
+.btn_menu i{
+    display: none;
+    font-size: 45px;
+    
+}
+
+.overlay_menu{
+    background-color: #000000a2;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9;
+    display: none;
+}
+  
+
+
+/* -----------------------Pagina 1------------------ */
+
+.pagina1 {
+    height:auto;
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+  
+.lado1a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 2vh 0 0 0;
+    position: relative;
+    color: white;
+}
+  
+.lado1a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/imagem3.png);
+    background-repeat: repeat; 
+    background-size: 80px 80px; 
+    opacity: 0.15; 
+    z-index: -1;
+}
+  
+.lado1a h2 {
+    color: var(--cor1);
+    font-size: 65px;
+}
+  
+.lado1a p {
+    color: var(--cor2);
+    font-size: 55px;
+    width: 40%;
+    font-style: normal;
+    text-align: center;
+}
+  
+.lado1b {
+    background-color: var(--cor3);
+    background-image: url(/img/imagem1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* -------------------Sessao 2----------------------------- */
+
+  
+.pagina2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: auto;
+    position: relative;
+    font-family: var(--fonte1);
+    background-color: var(--cor1);
+    align-items: center;
+    padding: 100px 60px;
+    color: white;
+    gap: 30px;
+    font-size: 50px;
+    z-index: 1; 
+    font-weight: 500;
+}
+  
+.pagina2::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/imagem5.png);
+    background-repeat: repeat; 
+    background-size: 50px 50px; 
+    opacity: 0.1; 
+    z-index: -1; 
+}
+  
+.pagina2 p {
+    padding: 40px 0 0 0;
+    width: 75%;
+    font-size: 25px;
+}
+  
+.pagina2 img {
+    border-radius: 30px 0 0 30px;
+    height: auto;
+    max-width: 100%;
+}
+  
+  
+/* ------------------Sessao 3-------------------------------------- */
+  
+  
+  
+.pagina3 {
+    height: auto;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    padding: 60px 50px;
+}
+  
+.pagina3-texto {
+    font-family: var(--fonte1);
+    color: var(--cor2);
+    font-size: 23px;
+    width: 90%;
+    text-align: right;
+    
+}
+  
+.pagina3-titulo {
+    color: var(--cor3);
+    font-weight: 400;
+    padding-bottom: 5vh;
+    font-size: 50px;
+}
+  
+.pagina3-img {
+    width: 600px;
+    max-width: 100%;
+    border-radius: 10000px;
+}
+  
+/* -------------------Sessao 4 ------------------------ */
+  
+  
+.pagina4{
+    height:auto;
+    background-color: var(--cor3);
+    color: var(--cor1);
+    font-family: var(--fonte1);
+    padding: 3% 15%;
+    font-weight: 400;
+}
+  
+.pagina4 img{
+    height: 10rem;
+    gap: 1rem;
+    width: 10rem;
+}
+  
+.pagina4 h2{
+    text-align: center;
+    font-size: 42px;
+}
+   
+.pagina4-lista{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    
+}
+  
+.pagina4-lista h3{
+    font-size: 30px;
+    padding: 0.5rem 0rem 0.5rem 0rem;
+}
+  
+.pagina4-lista p{
+  font-size: 20px;
+  width: 15rem;
+  padding: 1rem 0rem 1rem 0rem;
+}
+  
+
+/* ------------------------------ Sessao 4 ---------------------------- */
+  
+.contato{
+    height: 80vh;
+    background-image: url(/img/imagem7.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0px 0px 2rem 0px;
+}
+   
+.contato h2{
+    font-family: var(--fonte1);
+    color: white;
+    font-size: 3rem;
+}
+  
+/*----------------------Codigo da pagina anterior----------------------------------*/
+  
+.informacoes-contato {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    max-width: 400px;
+    text-align: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+  
+.info {
+    margin-bottom: 20px;
+}
+  
+.info h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+  
+.info p {
+    color: #333;
+    font-size: 16px;
+}
+
+
+/* -------------------Rodape-------------- */
+  
+.rodape {
+    background: #FF8346;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: auto;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+  
+.coluna {
+    margin: 10px;
+    flex: 1;
+    min-width: 150px;
+    overflow: hidden;
+}
+  
+.coluna ul {
+    list-style: none;
+    padding: 0;
+}
+  
+.coluna ul li {
+    margin: 5px 0;
+}
+  
+.coluna a {
+    color: #ffffff;
+    text-decoration: none;
+}
+  
+.social-icons img {
+    width: 20px;
+    margin: 0 5px;
+}
+
+@media screen and (max-width:1020px){
+
+    .gonte1{
+        text-align: center;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .pagina1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lado1a p{
+        width: auto;
+
+    }
+
+    .lado1b{
+        height: 50vh;
+    }
+
+    .pagina2{
+        display: flex;
+        flex-direction:column-reverse;
+        padding: 5%;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .pagina2 p, h2{
+        width: 100%;
+    }
+
+    .pagina2 img{
+        border-radius: 0%;
+        width: 400px;
+        max-width: none;
+    }
+
+    .pagina3{
+        display: flex;
+        flex-direction: column;
+        padding: 10px 10px;
+    }
+
+    .pagina3-texto, .pagina3-titulo{
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    .pagina3-img{
+        max-width: 700px;
+        border-radius: 0%;
+    }
+    
+    .pagina4-lista{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding-top: 40px
+    }
+
+    .contato{
+        display:flex ;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .contato h2{
+        color: var(--cor3);
+    }
+    
+}
