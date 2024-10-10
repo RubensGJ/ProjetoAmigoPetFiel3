@@ -34,7 +34,7 @@ header {
 }
 
 .auth-buttons .btn.acessar-perfil:hover {
-    background-color: #d62839; 
+    background-color: #d6c528; 
 }
 
 header .logo {
@@ -51,6 +51,7 @@ nav a {
     text-decoration: none;
     color: white;
     font-size: 18px;
+    transition: 0.5s;
 }
 
 .auth-buttons .btn {

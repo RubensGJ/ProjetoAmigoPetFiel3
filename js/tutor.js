@@ -1,9 +1,12 @@
 let registroEmailTutor = JSON.parse(localStorage.getItem('registroEmailTutor')) || ['EmailAdmin'];
 let registroSenhaTutor = JSON.parse(localStorage.getItem('registroSenhaTutor')) || ['SenhaAdmin'];
+let registroNomeTutor = JSON.parse(localStorage.getItem('registroNomeTutor')) || ['Admin'];
 let posicaoSenha = 0;
 let posicaoEmail = 0;
+let posicaoNome = 0;
 console.log(registroEmailTutor)
 console.log(registroSenhaTutor)
+console.log(registroNomeTutor)
 
 // Função que verifica se as senhas coincidem no cadastro
 function verificaSenha() {
@@ -45,7 +48,7 @@ function posicaoSenhaD() {
     if (registroSenhaTutor.includes(senhaDigitada)) {
         posicaoSenha = registroSenhaTutor.indexOf(senhaDigitada);
         console.log(posicaoSenha);
-        return posicaoEmail;
+        return posicaoSenha;
     } else {
         document.getElementById("senhaInsirida").value = "";
         alert("Senha não encontrada no sistema");
@@ -54,19 +57,33 @@ function posicaoSenhaD() {
 
 // Função que armazena o email e senha no array e no localStorage
 function registroLoginTutor() {
-    if (!verificaSenha()) {
-        return false;
-    }
 
     let emailTutor = document.getElementById("emailTutor").value;
+    
+        //Para verificar se o email já existe
+        if (registroEmailTutor.includes(emailTutor)) {
+            alert("Este email já está cadastrado");
+            return false;
+        } else {
+            if (!verificaSenha()) {
+                return false;
+            }
+            
     registroEmailTutor.push(emailTutor);
+
+    let nomeTutor = document.getElementById("nomeTutor").value;
+    registroNomeTutor.push(nomeTutor);
 
     // Salva o array atualizado no localStorage
     localStorage.setItem('registroEmailTutor', JSON.stringify(registroEmailTutor));
+    localStorage.setItem('registroNomeTutor', JSON.stringify(registroNomeTutor));
+    
 
     console.log(registroEmailTutor);
     alert("Cadastro salvo com sucesso (lembrar de direcionar a outra página)");
-    return false;
+    return false
+}
+
 }
 
 // Função que realiza o login
